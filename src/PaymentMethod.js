@@ -19,6 +19,7 @@ export function PaymentMethod() {
           <label htmlFor="card_number">Card Number:</label>
           <input
             type="text"
+            autofill="cc-number"
             name="card_number"
             id="card_number"
             pattern="[0-9]{15,16}"
@@ -27,12 +28,13 @@ export function PaymentMethod() {
         </div>
         <div className="form-line">
           <label htmlFor="expiry_date">Expiry date:</label>
-          <input type="month" name="expiry_date" id="expiry_date" required />
+          <input type="month" autofill="cc-exp" name="expiry_date" id="expiry_date" required />
         </div>
         <div className="form-line">
           <label htmlFor="security_code">Security code:</label>
           <input
             type="text"
+            autofill="cc-csc"
             name="security_code"
             id="security_code"
             pattern="[0-9]{3,4}"

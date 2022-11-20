@@ -12,11 +12,23 @@ export function Address() {
       </div>
       <div className="form-line">
         <label htmlFor="city">City:</label>
-        <input type="text" name="city" id="city" required />
+        <input
+          type="text"
+          autofill="address-level1"
+          name="city"
+          id="city"
+          required
+        />
       </div>
       <div className="form-line">
         <label htmlFor="postcode">Postcode:</label>
-        <input type="text" name="postcode" id="postcode" required />
+        <input
+          type="text"
+          autofill="postal-code"
+          name="postcode"
+          id="postcode"
+          required
+        />
       </div>
       <div className="form-line">
         <button type="button">Next</button>
