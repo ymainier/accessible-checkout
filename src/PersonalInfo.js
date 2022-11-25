@@ -1,7 +1,7 @@
 export function PersonalInfo() {
   return (
-    <fieldset>
-      <legend>PersonalInfo</legend>
+    <div>
+      <h2>PersonalInfo</h2>
       <div className="form-line">
         <label htmlFor="first_name">First name: </label>
         <input
@@ -36,9 +36,6 @@ export function PersonalInfo() {
           required
         />
       </div>
-      <div className="form-line">
-        <button type="button">Next</button>
-      </div>
-    </fieldset>
+    </div>
   );
 }

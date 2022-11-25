@@ -17,8 +17,8 @@ button {
   line-height: 1.5;
 }
 
-form {
-  width: 30em;
+.app {
+  width: 25em;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -28,27 +28,68 @@ label {
   display: block;
 }
 
-input,
-textarea {
+input {
   padding: 0.5rem;
   width: 100%;
   border: 1px solid;
+  border-radius: 3px;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   margin: 0 0.5rem 0 0;
   width: auto;
 }
 
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
   display: inline;
 }
 
 button {
+  border: 1px solid;
   margin-top: 1.5rem;
   padding: 0.5rem 1.5rem;
+  border-radius: 3px;
 }
 
 fieldset {
   margin: 1rem;
+}
+
+.voucher {
+  display: flex;
+  align-items: flex-end;
+}
+
+.voucher .form-line:first-of-type {
+  flex-grow: 1;
+}
+
+.voucher .form-line:first-of-type input {
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.voucher .form-line:last-of-type button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.basket [role="listitem"] {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.basket [role="listitem"] .name {
+  flex-grow: 1;
+}
+
+.basket .basket-total {
+  padding-top: 0.5rem;
+  border-top: 1px solid;
+}
+
+.basket [role="listitem"] .price {
+  flex-shrink: 0;
+  text-align: right;
 }
