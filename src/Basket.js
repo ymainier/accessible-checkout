@@ -17,7 +17,7 @@ export function Basket() {
     <section className="basket">
       <h2 id="basket">Basket</h2>
       <div role="list" aria-labelledby="basket">
-        <Item price="£10.99">Cinema Membership</Item>
+        <Item price="£9.99">Cinema Membership</Item>
         <Item price="£10.99">Entertainment Membership</Item>
         <Item price="£20.98" isTotal>Total</Item>
       </div>
