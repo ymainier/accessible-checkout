@@ -1,7 +1,7 @@
 export function Address() {
   return (
-    <section className="address">
-      <h2>Address</h2>
+    <fieldset className="address">
+      <legend>Address</legend>
       <div className="form-line">
         <label htmlFor="house_number">House number:</label>
         <input type="text" name="house_number" id="house_number" required />
@@ -30,6 +30,6 @@ export function Address() {
           required
         />
       </div>
-    </section>
+    </fieldset>
   );
 }

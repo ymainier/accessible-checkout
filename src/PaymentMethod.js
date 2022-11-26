@@ -67,8 +67,9 @@ export function Paypal() {
 
 export function PaymentMethod() {
   return (
-    <div>
+    <fieldset>
+      <legend>Payment method</legend>
       <CreditCard />
-    </div>
+    </fieldset>
   );
 }
