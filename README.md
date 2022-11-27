@@ -8,7 +8,7 @@
 
 ## Let's add a crossed-out price for promotion.
 
-```
+```gherkin
 Given I have a have product with a promotion in my basket
 When I'm on the checkout page
 Then I should see the full price crossed-out
@@ -29,10 +29,19 @@ And there should be no accessibility issue
   * Zero-height elements are not read by some screen readers,
   * Zero-width elements text are read as one big long word
 
-## Use `<VisuallyHidden />` from `@radix-ui/`
+## Use `<VisuallyHidden />` from `@radix-ui/react-visually-hidden`
+
+```tsx
+<span className="price">
+  <em aria-hidden>{previousPrice}</em>
+  <strong aria-hidden>{price}</strong>
+  <VisuallyHidden.Root>was {previousPrice}, now {price}</VisuallyHidden.Root>
+</span>
+```
 
 
-[Tooltip](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
+[APG Tooltip page](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
+[RaduixUI Tooltip implementation](https://www.radix-ui.com/docs/primitives/components/tooltip)
 
 [Tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/)
 
