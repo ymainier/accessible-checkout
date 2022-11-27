@@ -6,7 +6,7 @@ export function PersonalInfo() {
         <label htmlFor="first_name">First name: </label>
         <input
           type="text"
-          autofill="given-name"
+          autoComplete="given-name"
           name="first_name"
           id="first_name"
           required
@@ -16,7 +16,7 @@ export function PersonalInfo() {
         <label htmlFor="last_name">Last name: </label>
         <input
           type="text"
-          autofill="family-name"
+          autoComplete="family-name"
           name="last_name"
           id="last_name"
           required
@@ -24,13 +24,13 @@ export function PersonalInfo() {
       </div>
       <div className="form-line">
         <label htmlFor="email">Email: </label>
-        <input type="email" autofill="email" name="email" id="email" required />
+        <input type="email" autoComplete="email" name="email" id="email" required />
       </div>
       <div className="form-line">
         <label htmlFor="password">Password: </label>
         <input
           type="password"
-          autofill="new-password"
+          autoComplete="new-password"
           name="password"
           id="password"
           required

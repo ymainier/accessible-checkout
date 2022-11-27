@@ -14,7 +14,7 @@ export function Address() {
         <label htmlFor="city">City:</label>
         <input
           type="text"
-          autofill="address-level1"
+          autoComplete="address-level1"
           name="city"
           id="city"
           required
@@ -24,7 +24,7 @@ export function Address() {
         <label htmlFor="postcode">Postcode:</label>
         <input
           type="text"
-          autofill="postal-code"
+          autoComplete="postal-code"
           name="postcode"
           id="postcode"
           required

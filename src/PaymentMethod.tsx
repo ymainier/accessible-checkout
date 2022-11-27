@@ -18,7 +18,7 @@ function CreditCard() {
         <label htmlFor="card_number">Card Number:</label>
         <input
           type="text"
-          autofill="cc-number"
+          autoComplete="cc-number"
           name="card_number"
           id="card_number"
           pattern="[0-9]{15,16}"
@@ -29,7 +29,7 @@ function CreditCard() {
         <label htmlFor="expiry_date">Expiry date (MM/YY):</label>
         <input
           type="text"
-          autofill="cc-exp"
+          autoComplete="cc-exp"
           name="expiry_date"
           id="expiry_date"
           pattern="[0-9]{2}/[0-9]{2}"
@@ -40,7 +40,7 @@ function CreditCard() {
         <label htmlFor="security_code">Security code:</label>
         <input
           type="text"
-          autofill="cc-csc"
+          autoComplete="cc-csc"
           name="security_code"
           id="security_code"
           pattern="[0-9]{3,4}"
