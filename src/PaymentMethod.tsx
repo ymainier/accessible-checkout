@@ -1,3 +1,4 @@
+import * as Tooltip from "@radix-ui/react-tooltip";
 import { useId } from "react";
 
 function Terms() {
@@ -38,6 +39,21 @@ function CreditCard() {
       </div>
       <div className="form-line">
         <label htmlFor="security_code">Security code:</label>
+        <Tooltip.Provider>
+          <Tooltip.Root>
+            <Tooltip.Trigger
+              aria-label="What is a security code?"
+              className="tooltip-trigger"
+              type="button"
+            >
+              ?
+            </Tooltip.Trigger>
+            <Tooltip.Content className="tooltip-content">
+              That's the 3 digits at the back of your card.
+              <Tooltip.Arrow className="tooltip-arrow" />
+            </Tooltip.Content>
+          </Tooltip.Root>
+        </Tooltip.Provider>
         <input
           type="text"
           autoComplete="cc-csc"
