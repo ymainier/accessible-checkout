@@ -42,17 +42,22 @@ And there should be no accessibility issue
 # Tooltip
 
 - This design pattern is still a work in progress, see the [APG Tooltip page.](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
-- We can use a [RaduixUI Tooltip implementation.](https://www.radix-ui.com/docs/primitives/components/tooltip)
+- We can use the [RaduixUI Tooltip component.](https://www.radix-ui.com/docs/primitives/components/tooltip)
 - Implementation is fine for computer screen readers, but not for mobile screen readers like TalkBack on Android.
 
 # Tabs
 
 - [APG Tabs page](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/)
+- We can use the [RaduixUI Tabs component.](https://www.radix-ui.com/docs/primitives/components/tooltip)
+
+### Tests!
+
 - Beware of the default activation mode, set it to manual with `activationMode="manual"`
 
 # Disclosure
 
 - [APG Disclosure page](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
+- We can use the [RaduixUI Collapsible component.](https://www.radix-ui.com/docs/primitives/components/collapsible)
 
 # Accordion
 
