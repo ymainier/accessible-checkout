@@ -114,3 +114,19 @@ fieldset {
   border: 1px solid;
   border-radius: 3px;
 }
+
+.payment-tabs [role=tablist] button {
+  margin-top: 1rem;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.payment-tabs [role=tablist] button[aria-selected=true] {
+  box-shadow: inset 0 -5px 0 0 currentColor;
+}
+
+.payment-tabs [role=tabpanel] {
+  padding: 1rem;
+  border: 1px solid;
+}

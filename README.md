@@ -45,8 +45,15 @@ And there should be no accessibility issue
 - We can use a [RaduixUI Tooltip implementation.](https://www.radix-ui.com/docs/primitives/components/tooltip)
 - Implementation is fine for computer screen readers, but not for mobile screen readers like TalkBack on Android.
 
-[Tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/)
+# Tabs
 
-[Disclosure](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
+- [APG Tabs page](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/)
+- Beware of the default activation mode, set it to manual with `activationMode="manual"`
 
-[Accordion](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)
+# Disclosure
+
+- [APG Disclosure page](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
+
+# Accordion
+
+- [APG Accordion page](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)
