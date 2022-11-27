@@ -2,7 +2,7 @@ import { PersonalInfo } from "./PersonalInfo";
 import { Address } from "./Address";
 import { PaymentMethod } from "./PaymentMethod";
 
-export function CheckoutForm() {
+export function CheckoutForm(): JSX.Element {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <PersonalInfo />
