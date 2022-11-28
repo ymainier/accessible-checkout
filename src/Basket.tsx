@@ -1,5 +1,6 @@
 import { useId } from "react";
 import type { ReactNode } from "react";
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { VoucherForm } from "./VoucherForm";
 
 type ItemProps = {
@@ -19,7 +20,8 @@ function Item({
       <span className="name">{children}</span>
       {previousPrice ? (
         <span className="price">
-          <em>{previousPrice}</em> <strong>{price}</strong>
+          <em aria-hidden>{previousPrice}</em> <strong aria-hidden>{price}</strong>
+          <VisuallyHidden.Root>was ${previousPrice}, is now ${price}</VisuallyHidden.Root>
         </span>
 ) : (
         <span className="price">{price}</span>
