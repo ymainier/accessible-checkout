@@ -70,8 +70,7 @@ export function Paypal() {
 
 export function PaymentMethod() {
   return (
-    <fieldset>
-      <legend>Payment method</legend>
+    <section>
       <Tabs.Root className="payment-tabs" defaultValue="card" activationMode="manual">
         <Tabs.List>
           <Tabs.Trigger value="card">Card</Tabs.Trigger>
@@ -84,6 +83,6 @@ export function PaymentMethod() {
           <Paypal />
         </Tabs.Content>
       </Tabs.Root>
-    </fieldset>
+    </section>
   );
 }

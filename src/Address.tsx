@@ -1,7 +1,6 @@
 export function Address() {
   return (
-    <fieldset className="address">
-      <legend>Address</legend>
+    <section className="address">
       <div className="form-line">
         <label htmlFor="house_number">House number:</label>
         <input type="text" autoComplete="address-line1" name="house_number" id="house_number" required />
@@ -30,6 +29,6 @@ export function Address() {
           required
         />
       </div>
-    </fieldset>
+    </section>
   );
 }

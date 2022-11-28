@@ -158,11 +158,11 @@ fieldset {
   border-radius: 3px;
 }
 
-.accordion-item h2 {
+.accordion-item h3 {
   margin: 0;
 }
 
-.accordion-item h2 button {
+.accordion-item h3 button {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: transparent;
