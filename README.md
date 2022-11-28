@@ -1,3 +1,9 @@
+# Starting from an accessible foundation
+
+- Checking automatically with the axe-core chrome extension
+- Using my laptop screen reader ([How to use Apple VoiceOver (12:10 min)](https://www.youtube.com/watch?v=5R-6WvAihms))
+- Using my phone screen reader ([How to use Android TalkBack (11:01 min)](https://www.youtube.com/watch?v=0Zpzl4EKCco))
+
 # Reach UI
 
 * From the creator of ReactRouter, Remix, ...
@@ -39,6 +45,16 @@ And there should be no accessibility issue
 </span>
 ```
 
+# WAI/ARIA APG to the rescue
+
+- [Web Accessibility Initiative](https://www.w3.org/WAI/): Making the Web Accessible
+- [Accessible Rich Internet Applications](https://www.w3.org/WAI/ARIA/): WAI Working Group
+- [Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/): Design Pattern and Examples
+
+Note:
+- WAI: Initiative from W3C. Its goal is to provide strategies, standards, and supporting resources to help you make the Web more accessible to people with disabilities.
+- ARIA mission: develop technologies that enhance the accessibility of web content for people with disabilities.
+
 # Tooltip
 
 - This design pattern is still a work in progress, see the [APG Tooltip page.](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/)
@@ -52,7 +68,7 @@ And there should be no accessibility issue
 
 ### Tests!
 
-- Beware of the default activation mode, set it to manual with `activationMode="manual"`
+- Beware of the default activation mode, set it to manual with `activationMode="manual"`
 
 # Disclosure
 
