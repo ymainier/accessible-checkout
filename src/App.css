@@ -150,3 +150,25 @@ fieldset {
 .voucher-disclosure > button[aria-expanded=true]:after {
   content: "▲";
 }
+
+.accordion-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.accordion-item h2 {
+  margin: 0;
+}
+
+.accordion-item h2 button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+}

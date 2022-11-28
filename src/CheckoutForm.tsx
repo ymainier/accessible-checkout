@@ -8,7 +8,7 @@ export function CheckoutForm(): JSX.Element {
     <main aria-label="Checkout Form">
       <form onSubmit={(e) => e.preventDefault()}>
         <Accordion.Root type="single" defaultValue="personal-info">
-          <Accordion.Item value="personal-info">
+          <Accordion.Item value="personal-info" className="accordion-item">
             <h2>
             <Accordion.Trigger>Personal Info</Accordion.Trigger>
             </h2>
@@ -17,7 +17,7 @@ export function CheckoutForm(): JSX.Element {
             </Accordion.Content>
           </Accordion.Item>
 
-          <Accordion.Item value="address">
+          <Accordion.Item value="address" className="accordion-item">
             <h2>
               <Accordion.Trigger>Address</Accordion.Trigger>
             </h2>
@@ -26,7 +26,7 @@ export function CheckoutForm(): JSX.Element {
             </Accordion.Content>
           </Accordion.Item>
 
-          <Accordion.Item value="payment-method">
+          <Accordion.Item value="payment-method" className="accordion-item">
             <h2>
               <Accordion.Trigger>Payment Method</Accordion.Trigger>
             </h2>
