@@ -1,3 +1,4 @@
+import { useId } from "react";
 import type { ReactNode } from "react";
 import { VoucherForm } from "./VoucherForm";
 
@@ -16,10 +17,11 @@ function Item({ children, price, isTotal }: ItemProps): JSX.Element {
 }
 
 export function Basket(): JSX.Element {
+  const id = useId();
   return (
-    <section className="basket">
-      <h2 id="basket">Basket</h2>
-      <div role="list" aria-labelledby="basket">
+    <aside className="basket" aria-labelledby={id}>
+      <h2 id={id}>Basket</h2>
+      <div role="list" aria-labelledby={id}>
         <Item price="£9.99">Cinema Membership</Item>
         <Item price="£10.99">Entertainment Membership</Item>
         <Item price="£20.98" isTotal>
@@ -27,6 +29,6 @@ export function Basket(): JSX.Element {
         </Item>
       </div>
       <VoucherForm />
-    </section>
+    </aside>
   );
 }

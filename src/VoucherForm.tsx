@@ -5,7 +5,7 @@ export function VoucherForm() {
       <div className="voucher">
         <div className="form-line">
           <label htmlFor="voucher">Enter voucher code: </label>
-          <input type="text" name="voucher" id="voucher" required />
+          <input type="text" name="voucher" id="voucher" required autoComplete="off" />
         </div>
         <div className="form-line">
           <button type="button">Apply</button>

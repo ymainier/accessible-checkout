@@ -7,6 +7,7 @@ function App() {
     <main className="app">
       <h1>Checkout</h1>
       <Basket />
+      <hr role="presentation" />
       <CheckoutForm />
     </main>
   );
