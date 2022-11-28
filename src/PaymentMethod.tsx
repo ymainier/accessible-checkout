@@ -86,8 +86,7 @@ export function Paypal() {
 
 export function PaymentMethod() {
   return (
-    <fieldset>
-      <legend>Payment method</legend>
+    <section aria-label="Payment Method">
       <Tabs.Root className="payment-tabs" activationMode="manual" defaultValue="card">
         <Tabs.List>
           <Tabs.Trigger value="card">Card</Tabs.Trigger>
@@ -100,6 +99,6 @@ export function PaymentMethod() {
           <Paypal />
         </Tabs.Content>
       </Tabs.Root>
-    </fieldset>
+    </section>
   );
 }

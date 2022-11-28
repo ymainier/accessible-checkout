@@ -32,7 +32,7 @@ function Item({
 
 export function Basket(): JSX.Element {
   return (
-    <section className="basket">
+    <aside aria-labelledby="basket" className="basket">
       <h2 id="basket">Basket</h2>
       <div role="list" aria-labelledby="basket">
         <Item price="£9.99" previousPrice="£14.99">Cinema Membership</Item>
@@ -42,6 +42,6 @@ export function Basket(): JSX.Element {
         </Item>
       </div>
       <VoucherForm />
-    </section>
+    </aside>
   );
 }
