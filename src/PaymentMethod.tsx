@@ -1,4 +1,5 @@
 import { useId } from "react";
+import * as Tabs from "@radix-ui/react-tabs";
 
 function Terms() {
   const id = useId();
@@ -56,20 +57,33 @@ function CreditCard() {
 }
 
 export function Paypal() {
-  <div>
-    <h2>Paypal</h2>
-    <Terms />
-    <div className="form-line">
-      <button>Checkout with Paypal</button>
+  return (
+    <div>
+      <h2>Paypal</h2>
+      <Terms />
+      <div className="form-line">
+        <button>Checkout with Paypal</button>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export function PaymentMethod() {
   return (
     <fieldset>
       <legend>Payment method</legend>
-      <CreditCard />
+      <Tabs.Root className="payment-tabs" defaultValue="card">
+        <Tabs.List>
+          <Tabs.Trigger value="card">Card</Tabs.Trigger>
+          <Tabs.Trigger value="paypal">Paypal</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="card">
+          <CreditCard />
+        </Tabs.Content>
+        <Tabs.Content value="paypal">
+          <Paypal />
+        </Tabs.Content>
+      </Tabs.Root>
     </fieldset>
   );
 }
