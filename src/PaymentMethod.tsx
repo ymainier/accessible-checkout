@@ -71,7 +71,11 @@ export function Paypal() {
 export function PaymentMethod() {
   return (
     <section>
-      <Tabs.Root className="payment-tabs" defaultValue="card" activationMode="manual">
+      <Tabs.Root
+        className="payment-tabs"
+        defaultValue="card"
+        activationMode="manual"
+      >
         <Tabs.List>
           <Tabs.Trigger value="card">Card</Tabs.Trigger>
           <Tabs.Trigger value="paypal">Paypal</Tabs.Trigger>
