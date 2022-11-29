@@ -1,5 +1,6 @@
 import { useId } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
+import * as Tooltip from "@radix-ui/react-tooltip";
 
 function Terms() {
   const id = useId();
@@ -39,6 +40,18 @@ function CreditCard() {
       </div>
       <div className="form-line">
         <label htmlFor="security_code">Security code:</label>
+        <Tooltip.Provider>
+          <Tooltip.Root>
+            <Tooltip.Trigger aria-label="Where can I find my security code?" className="tooltip-trigger">?</Tooltip.Trigger>
+            <Tooltip.Portal>
+              <Tooltip.Content className="tooltip-content">
+                Your security code is the last 3 digits on the back of your card.
+                <Tooltip.Arrow />
+              </Tooltip.Content>
+            </Tooltip.Portal>
+          </Tooltip.Root>
+        </Tooltip.Provider>
+
         <input
           type="text"
           autoComplete="cc-csc"
