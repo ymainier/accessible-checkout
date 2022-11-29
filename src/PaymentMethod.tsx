@@ -42,7 +42,7 @@ function CreditCard() {
         <label htmlFor="security_code">Security code:</label>
         <Tooltip.Provider>
           <Tooltip.Root>
-            <Tooltip.Trigger aria-label="Where can I find my security code?" className="tooltip-trigger">?</Tooltip.Trigger>
+            <Tooltip.Trigger aria-label="Where can I find my security" className="tooltip-trigger">?</Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Content className="tooltip-content">
                 Your security code is the last 3 digits on the back of your card.
