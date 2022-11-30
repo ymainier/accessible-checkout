@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Headless UI libs</h2>
+          <p>Unstyled, accessible components</p>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <h2>Reach UI</h2>
+            <ul>
+              <li>From the team behind React Router/Remix</li>
+              <li>Provide several accessible UI patterns</li>
+              <li>Used in EU Sales</li>
+            </ul>
+          </section>
+
+          <section data-auto-animate>
+            <h2>Reach UI</h2>
+            <ul>
+              <li>From the team behind React Router/Remix</li>
+              <li>Provide several accessible UI patterns</li>
+              <li>Used in EU Sales</li>
+
+              <li style="margin-top: 2rem">
+                <a
+                  target="_blank"
+                  href="https://github.com/reach/reach-ui/issues/972"
+                  >Not maintained</a
+                >
+                since end of September :(
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Radix UI</h2>
+          <ul>
+            <li>Recommended by the last Reach UI maintainer</li>
+            <li>
+              Tops that
+              <a
+                href="https://npmtrends.com/@radix-ui/primitive-vs-@react-aria/utils-vs-ariakit"
+                target="_blank"
+                >npm trend</a
+              >
+              between
+              <a href="https://www.radix-ui.com/" target="_blank">Radix UI</a>,
+              <a href="https://github.com/ariakit/ariakit" target="_blank"
+                >Ariakit</a
+              >
+              or
+              <a
+                href="https://react-spectrum.adobe.com/react-aria/"
+                target="_blank"
+                >React Aria</a
+              >.
+            </li>
+            <li>The cool kids are using it (Vercel and CodeSandbox)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Starting from Accessible foundation</h2>
+
+          <ul>
+            <li>axe-core chrome extension</li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=5R-6WvAihms"
+                target="_blank"
+                >How to use Apple VoiceOver (12:10 min)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=0Zpzl4EKCco"
+                target="_blank"
+                >How to use Android TalkBack (11:01 min)</a
+              >
+            </li>
+          </ul>
+
+          <pre><code class="hljs language-shell"> git checkout talk </code></pre>
+        </section>
+
+        <section>
+          <section>
+            <h2>Crossed-out price for promotion</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+  Given I have a have product with a promotion in my basket
+  When I'm on the checkout page
+  Then I should see the full price crossed-out
+              </code>
+            </pre>
+
+            <pre><code class="hljs language-shell"> git checkout talk-visually-hidden-1</code></pre>
+          </section>
+
+          <section>
+            <h2>First Implementation</h2>
+            <ul>
+              <li>Axe core is saying that everything is fine: done!</li>
+              <li>Let's validate that with a screen reader</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Crossed-out price for promotion</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+  Given I have a have product with a promotion in my basket
+  When I'm on the checkout page
+  Then I should see the full price crossed-out
+  * And there should be no accessibility issue *
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <ul>
+              <li>
+                Surprisingly complex
+                <a href="https://www.a11yproject.com/posts/how-to-hide-content/"
+                  >how to hide content</a
+                >
+              </li>
+              <li>
+                Fascinating edge cases!
+                <ul>
+                  <li>RTL</li>
+                  <li>0-height elements not read by some screen readers</li>
+                  <li>0-width elements text read as one big long word</li>
+                </ul>
+              </li>
+              <li style="margin-top: 2rem">
+                <a
+                  href="https://www.radix-ui.com/docs/primitives/utilities/visually-hidden"
+                  target="_blank"
+                  >@radix-ui/react-visually-hidden</a
+                >
+              </li>
+            </ul>
+            <pre><code class="hljs language-shell"> git checkout talk-visually-hidden-2</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <h2>Patterns from WAI/ARIA APG</h2>
+          <ul>
+            <li>
+              <a href="https://www.w3.org/WAI/" target="_blank"
+                >Web Accessibility Initiative</a
+              >: Making the Web Accessible
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/ARIA/" target="_blank"
+                >Accessible Rich Internet Applications</a
+              >: WAI Working Group
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank"
+                >Authoring Practices Guide</a
+              >: Design Pattern and Examples
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tabs</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+    Given I'm checking-out
+    When I'm in the payment section
+    Then I can choose between card payment and Paypal
+    * And there should be no accessibility issue *
+              </code>
+            </pre>
+          </section>
+          <section>
+            <blockquote>
+              Tabs are a set of layered sections of content, known as tab
+              panels, that display one panel of content at a time.
+            </blockquote>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/"
+                  target="_blank"
+                  >APG Tabs page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.radix-ui.com/docs/primitives/components/tooltip"
+                  target="_blank"
+                  >RaduixUI Tabs component</a
+                >
+              </li>
+            </ul>
+            <pre><code class="hljs language-shell"> git checkout talk-tabs-1</code></pre>
+          </section>
+          <section>
+            <h2>Test!</h2>
+            <p>The default activation mode is not great for screen readers</p>
+            <pre><code class="hljs language-shell"> git checkout talk-tabs-2</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Disclosure</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+  Given I'm on the checkout page
+  When I'm in the basket section
+  Then the voucher form should be hidden at first
+  * And there should be no accessibility issue *
+              </code>
+            </pre>
+          </section>
+          <section>
+            <blockquote>
+              A disclosure is a widget that enables content to be either
+              collapsed (hidden) or expanded (visible).
+            </blockquote>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
+                  target="_blank"
+                  >APG Disclosure page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.radix-ui.com/docs/primitives/components/collapsible"
+                  target="_blank"
+                  >RaduixUI Collapsible component</a
+                >
+              </li>
+            </ul>
+            <pre><code class="hljs language-shell"> git checkout talk-disclosure</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Accordion</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+  Given I'm on the checkout page
+  When I'm filling out the checkout form
+  Then I should only one section at a time
+  * And there should be no accessibility issue *
+              </code>
+            </pre>
+          </section>
+          <section>
+            <blockquote>
+              An accordion is a vertically stacked set of interactive headings
+              that each contain a title, content snippet, or thumbnail
+              representing a section of content.
+            </blockquote>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/"
+                  target="_blank"
+                  >APG Accordion page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.radix-ui.com/docs/primitives/components/accordion"
+                  target="_blank"
+                  >RaduixUI Accordion component</a
+                >
+              </li>
+            </ul>
+            <pre><code class="hljs language-shell"> git checkout talk-accordion-1</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Tooltip</h2>
+
+            <pre>
+              <code class="hljs language-gherkin">
+    Given I'm on the checkout page
+    When I'm in the Card Payment Tab
+    Then I should have an explanation of the CVV
+    * And there should be no accessibility issue *
+              </code>
+            </pre>
+          </section>
+          <section>
+            <blockquote>
+              A tooltip is a popup that displays information related to an
+              element when the element receives keyboard focus or the mouse
+              hovers over it.
+            </blockquote>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/"
+                  target="_blank"
+                  >APG Tooltip page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.radix-ui.com/docs/primitives/components/tooltip"
+                  target="_blank"
+                  >RaduixUI Tooltip component</a
+                >
+              </li>
+            </ul>
+            <pre><code class="hljs language-shell"> git checkout talk-tooltip-1</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <ul>
+            <li>Consider using a headless UI lib! Or not :)</li>
+            <li style="margin-top: 2rem">
+              Most importantly test the accessibility your applications with
+              assistive technology!
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
